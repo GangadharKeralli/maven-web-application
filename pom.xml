@@ -97,14 +97,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.212.27.68:9980/mithuntechnologies/repository/citibank-release/</url>
+	      <name>Sbi Bank Releases Nexus Repository</name>
+	      <url>http://3.110.27.86:9880/Gangadhar/repository/sbibank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.212.27.68:9980/mithuntechnologies/repository/citibank-snapshot/</url>
+	      <name>Sbi Bank Snapshot Nexus Repository </name>
+	      <url>http://3.110.27.86:9880/Gangadhar/repository/sbibank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
