@@ -10,6 +10,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     
     //Checkout Code State
     stage ('Checkout Code') {
+    sendSlackNotifications("STARTED")
         git branch: 'development', credentialsId: 'a9b29dba-fc87-41a5-b6e9-d62b1f7e9ac5', url: 'https://github.com/GangadharKeralli/maven-web-application.git'
     }
    
@@ -20,7 +21,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     
     //Execute SonarQube Report
     stage ('Execute SonarQube Report') {
-        sh "${mavenHome}/bin/mvn sonar:sona"
+        sh "${mavenHome}/bin/mvn sonar:sonar"
     }
     
     //Upload Artifacts into Nexus
