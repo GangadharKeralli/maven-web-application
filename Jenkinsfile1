@@ -18,7 +18,6 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
         sh "${mavenHome}/bin/mvn clean package"
     }
     
-    /*
     //Execute SonarQube Report
     stage ('Execute SonarQube Report') {
         sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -35,5 +34,4 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
         sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.45.59:/opt/apache-tomcat-9.0.68/webapps/"
 }
     }
-  */
 }// node closing
