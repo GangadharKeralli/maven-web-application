@@ -34,13 +34,16 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
         sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.45.59:/opt/apache-tomcat-9.0.68/webapps/"
 }
     }
-    }//try block closing
+    }// try closing
     catch(e) {
     currentBuild.result="FAILURE"
     }
     finally {
     sendSlackNotifications(currentBuild.result)
+    }
 }// node closing
+
+//Function for SlackNotifications
 
 def sendSlackNotifications(String buildStatus = 'STARTED') {
   // build status of null means successful
