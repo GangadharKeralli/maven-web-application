@@ -20,7 +20,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
     
     //Execute SonarQube Report
     stage ('Execute SonarQube Report') {
-        sh "${mavenHome}/bin/mvn sonar:sonar"
+        sh "${mavenHome}/bin/mvn sonar:sona"
     }
     
     //Upload Artifacts into Nexus
