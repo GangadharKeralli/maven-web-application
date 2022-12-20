@@ -14,6 +14,7 @@ tools {
 stages {
   stage ('Checkout Code State') {
   steps {
+  sendSlackNotifications ("STARTED")
   git branch: 'development', credentialsId: 'a9b29dba-fc87-41a5-b6e9-d62b1f7e9ac5', url: 'https://github.com/GangadharKeralli/maven-web-application.git'
   }
   }
@@ -41,6 +42,19 @@ stages {
   }
   
  }//stages
+ 
+ post {
+  always {
+    sendSlackNotifications(currentBuild.result)
+  }
+  success {
+    sendSlackNotifications(currentBuild.result)
+  }
+  failure {
+    sendSlackNotifications(currentBuild.result)
+  }
+  }
+
 }//pipeline
 
 //Function for SlackNotifications
@@ -68,5 +82,5 @@ stages {
   }
 
   // Send notifications
-  slackSend (color: colorCode, message: summary)
+  slackSend (color: colorCode, message: summary, channel: '#sbibank')
   }
