@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://172.31.47.247:9000/</sonar.host.url>
+		<sonar.host.url>http://13.235.95.47:9000/</sonar.host.url>
                 <sonar.login>squ_239c2e397b45f744e4fd91b7c47ba7ba7102ef5f</sonar.login>
 	
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sbi Bank Releases Nexus Repository</name>
-	      <url>http://3.108.215.215:9880/Gangadhar/repository/sbibank-release/</url>
+	      <url>http://65.0.181.74:9880/Gangadhar/repository/sbibank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sbi Bank Snapshot Nexus Repository </name>
-	      <url>http://3.108.215.215:9880/Gangadhar/repository/sbibank-snapshot/</url>
+	      <url>http://65.0.181.74:9880/Gangadhar/repository/sbibank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
