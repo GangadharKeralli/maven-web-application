@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Sbi Bank Releases Nexus Repository</name>
-	      <url>http://3.110.50.56:9880/Gangadhar/repository/sbibank-release/</url>
+	      <url>http://3.110.166.169:9880/Gangadhar/repository/sbibank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Sbi Bank Snapshot Nexus Repository </name>
-	      <url>http://3.110.50.56:9880/Gangadhar/repository/sbibank-snapshot/</url>
+	      <url>http://3.110.166.169:9880/Gangadhar/repository/sbibank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
